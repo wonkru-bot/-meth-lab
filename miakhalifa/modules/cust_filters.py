@@ -143,8 +143,8 @@ def filters(bot: Bot, update: Update):
             dispatcher.remove_handler(handler, HANDLER_GROUP)
        
     all_handlers = sql.get_chat_triggers(chat.id)
-    if len(all_handlers)>5:
-        msg.reply_text("limit ethy mone")
+    if len(all_handlers)>300:
+        msg.reply_text("😒Sorry To Inform You that You have reached the maximum number of Filters(300)")
         return
 
     sql.add_filter(chat_id, keyword, content, is_sticker, is_document, is_image, is_audio, is_voice, is_video,
