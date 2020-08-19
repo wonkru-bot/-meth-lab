@@ -53,6 +53,11 @@ if ENV:
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
+    try:
+        FTR_LIM =  int(os.environ.get('FTR_LIM', "50"))
+    except ValueError:
+        raise Exception("Your sudo or dev users list does not contain valid integers.")
+
 
     GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
     WEBHOOK = bool(os.environ.get('WEBHOOK', False))
@@ -111,6 +116,11 @@ else:
         WHITELIST_USERS = set(int(x) for x in Config.WHITELIST_USERS or [])
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
+
+    try:
+        FILTER_LIMIT =  int(os.environ.get('FTR_LIM', "50"))
+    except ValueError:
+        raise Exception("Filter Limit Should Be A Integer.")
 
     GBAN_LOGS = Config.GBAN_LOGS
     WEBHOOK = Config.WEBHOOK
