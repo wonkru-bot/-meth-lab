@@ -8,7 +8,7 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-from miakhalifa import dispatcher, LOGGER
+from miakhalifa import dispatcher, LOGGER, FILTER_LIMIT
 from miakhalifa.modules.disable import DisableAbleCommandHandler
 from miakhalifa.modules.helper_funcs.chat_status import user_admin
 from miakhalifa.modules.helper_funcs.extraction import extract_text
@@ -21,7 +21,7 @@ from miakhalifa.modules.connection import connected
 
 HANDLER_GROUP = 10
 BASIC_FILTER_STRING = "*Filters in this chat:*\n"
-
+FILTER_LIMIT = int(os.environ.get('FTR_LIM', "1000"))
 
 @run_async
 def list_handlers(bot: Bot, update: Update):
@@ -143,8 +143,8 @@ def filters(bot: Bot, update: Update):
             dispatcher.remove_handler(handler, HANDLER_GROUP)
        
     all_handlers = sql.get_chat_triggers(chat.id)
-    if len(all_handlers)>300:
-        msg.reply_text("😒Sorry To Inform You that You have reached the maximum number of Filters(300)")
+    if len(all_handlers) > FILTER_LIMIT:
+        msg.reply_text("_Maximum Number Of Filters Reached In_ *{}*!".format(chat_name), parse_mode=telegram.ParseMode.MARKDOWN)
         return
 
     sql.add_filter(chat_id, keyword, content, is_sticker, is_document, is_image, is_audio, is_voice, is_video,
