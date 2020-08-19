@@ -88,7 +88,11 @@
          "required": false,
          "value": "557639247"
       },
-     
+      "FILTER_LIMIT": { 
+         "description": "Maximum Number of Filters That can be Added in Each Group", 
+         "required": true, 
+         "value": "1000"
+      }, 
       "TOKEN": {
          "description": "Your bot token.",
          "required": true,
