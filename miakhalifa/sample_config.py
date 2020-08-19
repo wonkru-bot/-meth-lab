@@ -24,7 +24,7 @@ class Config(object):
     NO_LOAD = ['translation', 'rss']
     WEBHOOK = False
     URL = None
-    FILTER_LIM = os.environ.get('FILTER_LIMIT', None)
+    FILTER_LIMIT = os.environ.get('FILTER_LIMIT', None)
 
     # OPTIONAL
     #ID Seperation format [1,2,3,4]
