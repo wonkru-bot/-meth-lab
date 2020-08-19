@@ -54,9 +54,9 @@ if ENV:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
     try:
-        FTR_LIM =  int(os.environ.get('FILTER_LIMIT', "50"))
+        FILTER_LIMIT =  int(os.environ.get('FILTER_LIMIT', "50"))
     except ValueError:
-        raise Exception("Your sudo or dev users list does not contain valid integers.")
+        raise Exception("Filter Limit Should Be A Integer")
 
 
     GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
