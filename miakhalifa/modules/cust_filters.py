@@ -21,7 +21,7 @@ from miakhalifa.modules.connection import connected
 
 HANDLER_GROUP = 10
 BASIC_FILTER_STRING = "*Filters in this chat:*\n"
-FILTER_LIMIT = int(os.environ.get('FTR_LIM', "1000"))
+FILTER_LIMIT = int(os.environ.get('FILTER_LIMIT', "1000"))
 
 @run_async
 def list_handlers(bot: Bot, update: Update):
