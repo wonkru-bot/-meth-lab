@@ -1,4 +1,5 @@
 ### Mia Khalifa Bot
+#<p align="left"><a href="https://github.com/xditya/TeleBot"><img src="https://github-readme-stats.vercel.app/api/pin?username=WONKRU_HERE&show_icons=true&theme=dark&hide_border=true&repo=TeleBot"></a></p><p align="centre"><a href="https://t.me/TeleBotHelpChat"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="Support" /></a><a href="https://github.com/xditya/TeleBot/stargazers"><img src="https://img.shields.io/github/stars/WONKRU_HERE/TeleBot?style=social"></a><a href="https://github.com/wonkru-bot/wonkru2.0/fork"><img src="https://img.shields.io/github/forks/xditya/TeleBot?label=Fork&logoColor=blue&style=social"></a>	<a href="https://github.com/wonkru-bot/wonkru2.0"><img src="https://img.shields.io/github/last-commit/xditya/TeleBot?style=flat-square"></a></p>
 
 <p align="center">
 <img src="https://telegra.ph/file/7891c5a8eb0ee937df8cd.jpg" alt="Mia Khalifa bot">
